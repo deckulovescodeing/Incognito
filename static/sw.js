@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'scheduler-v1';
+const CACHE_VERSION = 'scheduler-v2';
 const CORE_ASSETS = [
   '/',
   '/index.html',
