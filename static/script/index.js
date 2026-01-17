@@ -57,6 +57,7 @@ import { access } from './home.js';
 import { options } from './options.js';
 import { support } from './support.js';
 import { community } from './community.js';
+import { scheduler } from './scheduler.js';
 
 window.app = new App();
 
@@ -257,8 +258,10 @@ app.on('#apps', apps);
 app.on('#settings', options);
 app.on('#support', support);
 app.on('#community', community);
+app.on('#scheduler', scheduler);
 
 app.init();
+registerServiceWorker();
 
 
 function createLink(href = null, content = '', config = {}) {
@@ -271,4 +274,9 @@ function timeout(time = 1000) {
     return new Promise(resolve => 
         setTimeout(resolve, time)
     );
+};
+
+function registerServiceWorker() {
+    if (!('serviceWorker' in navigator)) return;
+    navigator.serviceWorker.register('/sw.js');
 };

@@ -1,0 +1,16 @@
+{
+  "name": "Hardee's Scheduling App",
+  "short_name": "Scheduler",
+  "description": "Offline-ready scheduling planner with editable grids, staff data, and demand settings.",
+  "start_url": "/#scheduler",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/index.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
